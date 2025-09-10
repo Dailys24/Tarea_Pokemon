@@ -1,4 +1,4 @@
-#Agrupamiento y analisis por grupo
+#Agrupamiento_y_analisis_por_grupo.py
 
 import pandas as pd
 
@@ -43,4 +43,5 @@ def estadisticas_alaisis():
         print(f"Ocurrió un error: {e}")
 
 if __name__ == '__main__':
+
     estadisticas_alaisis()
