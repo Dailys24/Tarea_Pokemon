@@ -12,7 +12,7 @@ def estadisticas():
         promedio_ataque = df['Ataque'].mean()
         mediana_ataque = df['Ataque'].median()
         moda_ataque = df['Ataque'].mode()
-        print(f"Promedio de Ataque: {promedio_ataque:.2f}")
+        print(f"Promedio de Ataque: {promedio_ataque:.1f}")
         print(f"Mediana de Ataque: {mediana_ataque}")
         print(f"Moda de Ataque: {moda_ataque.tolist()}")
 
@@ -33,9 +33,10 @@ def estadisticas():
         rango_ps = df['PS'].max() - df['PS'].min()
         desviacion_estandar_ps = df['PS'].std()
         print(f"Rango de PS: {rango_ps}")
-        print(f"Desviación estándar de PS: {desviacion_estandar_ps:.2f}")
+        print(f"Desviación estándar de PS: {desviacion_estandar_ps:.1f}")
 
     except FileNotFoundError:
         print("Error: El archivo 'pokemon_primera_gen.csv' no fue encontrado. Asegúrate de que esté en el mismo directorio.")
     except Exception as e:
+
         print(f"Ocurrió un error: {e}")
