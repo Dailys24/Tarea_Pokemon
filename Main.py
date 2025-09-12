@@ -11,9 +11,10 @@ from Estadistica_descriptiva import estadisticas
 from Visualizacion_de_Datos import visualizar_datos
 from Poder_total import calcular_poder_total
 from Agrupamiento_y_Analisis import estadisticas_alaisis
+from Analisis_exploratorio import analisis_eda
+from Interpretacion import interpretacion
 
-
-#Unción principal que contiene el menú
+#Función principal que contiene el menú
 def main():
     while True:
         #Limpiar la pantalla de la consola
@@ -28,62 +29,57 @@ def main():
         print("\n\u27a4 [3] Vizualización de datos")
         print("\n\u27a4 [4] Manipulacion de datos")
         print("\n\u27a4 [5] Agrupamiento y análisis por grupo")
-        print("\n\u27a4 [6] ")
-        print("\n\u27a4 [7] ")
-        print("\n\u27a4 [8] Terminar")
-        print("\n****************************************************************************************")
+        print("\n\u27a4 [6] Análisis exploratorio de datos (EDA)")
+        print("\n\u27a4 [7] Ejercicios de interpretación de resultados")
+        print("\n\u27a4 [8] Salir\n")
+        print("****************************************************************************************")
 
         try:
-            op = int(input("\nIngrese una opcion: "))
+            op = int(input("\u27a4 Digite la operación a realizar: "))
             
-            if op < 1 or op > 8:
-                print("\n*** Opcion invalida. Porfavor digite nuevamente ***\n")
-                input("Presione Enter para continuar...")
-                continue #Vuelve al inicio del bucle
-            
-            #Switch-case en Python (usamos un diccionario o if/elif/else)
             if op == 1:
                 print("------------------------------------------------------------------------------------")
-                filtrar_pokemons_fuego() #Llamamos a la función filtrar pokemons fuego del problema 1
+                filtrar_pokemons_fuego() #Llamamos a la función del problema 1
                 print("------------------------------------------------------------------------------------")
             
             elif op == 2:
                 print("------------------------------------------------------------------------------------")
-                estadisticas() #Llamamos a la función estadisticas del problema 2
+                estadisticas() #Llamamos a la función de estadísticas descriptivas del problema 2
                 print("------------------------------------------------------------------------------------")
+            
             elif op == 3:
                 print("------------------------------------------------------------------------------------")
-                visualizar_datos() #Llamamos a la función visualizar datos del problema 3
+                visualizar_datos() #Llamamos a la función de visualización del problema 3
                 print("------------------------------------------------------------------------------------")
+            
             elif op == 4:
                 print("------------------------------------------------------------------------------------")
-                calcular_poder_total() #Llamamos a la función calcular poder total del problema 4
+                calcular_poder_total() #Llamamos a la función de manipular datos del problema 4
                 print("------------------------------------------------------------------------------------")
             
             elif op == 5:
                 print("------------------------------------------------------------------------------------")
-                estadisticas_alaisis() #Llamamos a la función estadisticas por tipo del problema 5
+                estadisticas_alaisis() #Llamamos a la función del problema 5
                 print("------------------------------------------------------------------------------------")
             
             elif op == 6:
                 print("------------------------------------------------------------------------------------")
-                 #Llamamos a la función del problema 6
+                analisis_eda() #Llamamos a la función análisis eda del problema 6
                 print("------------------------------------------------------------------------------------")
 
             elif op == 7:
                 print("------------------------------------------------------------------------------------")
-                 #Llamamos a la función del problema 7
+                interpretacion() #Llamamos a la función interpretacion del problema 7
                 print("------------------------------------------------------------------------------------")
             
             elif op == 8:
                 print("\n****Gracias por utilizar****")
                 break
-
             while True:
                 opcion = input("\n\u27a4¿Desea Realizar otra operacion? (Y=si/N=no): ").upper()
                 if opcion == 'N':
                     print("\n****Gracias por utilizar****")
-                    return
+                    return 
                 elif opcion == 'Y':
                     break
                 else:
